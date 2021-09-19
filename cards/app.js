@@ -1,24 +1,15 @@
 const slides = document.querySelectorAll('.slide')
 
-
-
-slides.forEach((slide,index,array)=>{
-   
+slides.forEach((slide)=>{
    slide.addEventListener('click',(e)=>{
-      slide.classList.remove('active')
-         // slide.classList.remove('active')
-      
-      if (slide.classList.contains('slide')) {
-         slide.classList.toggle('active')
-      }
-      
-       
+      if (slide.classList.contains('active')) {
+         slide.classList.remove('active')     
+      }else{
+         clearActiveClasses()
+         slide.classList.add('active')
+      } 
    })
-   
 })
-   
-  
-
 
 function clearActiveClasses() {
    slides.forEach((slide)=>{
