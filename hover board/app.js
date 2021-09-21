@@ -39,9 +39,5 @@ function getRandomColor() {
    const g = Math.floor(Math.random() * 255)
    const b = Math.floor(Math.random() * 255)
 
-   const color = `#${r}${g}${b}`
-
-
-   return color
-   
+   return color  = `rgb(${r},${g},${b})`
 }
